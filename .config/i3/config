@@ -1,0 +1,141 @@
+# ---
+# Lucy's Rice Field
+# Base i3 config
+# ---
+
+
+# I use mod4 (windows)
+set $mod Mod4
+
+# configure title bars
+font pango:monospace 8px
+title_align center
+
+# start a load of stuff
+exec .screenlayout/layout.sh 				# sets monitor layout with xrandr
+exec --no-startup-id ~/.config/polybar/start.sh		# start polybar
+exec xrdb .Xresources					# xrdb for urxvt
+exec lxsession						# lxsession for polkit, autostart
+exec picom						# make it pretty
+exec --no-startup-id nm-applet				# networking config in the tray
+exec feh --bg-fill wallpaper.jpg			# set wallpaper
+
+# bind print to flameshot for screenshots
+bindsym Print exec flameshot gui
+
+# control pulseaudio volume with media buttons
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 1
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 1
+bindsym XF86AudioMute exec pulseaudio-ctl mute
+
+# control playerctl players with media buttons
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# keybinds for terminal, kill, and rofi
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec rofi -show run
+
+# default keybinds for movement, focus, split and layout
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating and focus between (I have the defaults flipped)
+bindsym $mod+space floating toggle
+bindsym $mod+Shift+space focus mode_toggle
+
+# focus the parent container (default)
+bindsym $mod+a focus parent
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload, restart, shutdown
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "~/scripts/shutdown.sh"
+
+# resize with ctrl
+bindsym $mod+Control+j resize shrink width 10 px or 10 ppt
+bindsym $mod+Control+k resize grow height 10 px or 10 ppt
+bindsym $mod+Control+l resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+semicolon resize grow width 10 px or 10 ppt
+
+# same bindings, but for the arrow keys
+bindsym $mod+Control+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Control+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Control+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
+
+# add gaps for visual separation
+for_window [class="^.*"] border pixel 0 
+gaps inner 12
+
+
+# fix for jetbrains ide splash screens
+for_window [class="jetbrains-idea" title="win0"] floating enable;
