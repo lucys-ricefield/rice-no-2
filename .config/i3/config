@@ -120,7 +120,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # reload, restart, shutdown
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "~/scripts/shutdown.sh"
+bindsym $mod+Shift+e exec "~/.scripts/shutdown.sh"
 
 # resize with ctrl
 bindsym $mod+Control+j resize shrink width 10 px or 10 ppt
