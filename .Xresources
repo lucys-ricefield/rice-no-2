@@ -17,7 +17,7 @@ URxvt.keysym.Shift-Meta-c:	builtin-string:
 URxvt.keysym.Shift-Meta-v:	builtin-string:
 
 URxvt.font:		xft:Azeret Mono:size=10
-URxvt.internalBorder:  	16
+URxvt.internalBorder:  	24
 
 ! colours
 ! special

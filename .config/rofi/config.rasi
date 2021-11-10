@@ -1,5 +1,6 @@
 configuration {
 	theme: "lucys-ricefield-2";
 	monitor: "primary";
+	drun-display-format: "{name}";
 }
 /* vim:ft=css
