@@ -1,0 +1,47 @@
+/* ---
+ * Lucy's Rice Field
+ * https://github.com/lucys-ricefield
+ * Rice #2
+ * lucys-ricefield-2 rofi theme */
+
+* {
+	background-color:	transparent;
+	color:			white;
+	font:			"Azeret Mono 10";
+}
+
+selected {
+	color:	#40beaa;
+}
+
+window {
+	location: 	south;
+	height:		40px;
+	width: 		1300px;
+}
+
+mainbox {
+	orientation: horizontal;
+	padding: 8 0;
+}
+
+listview {
+	layout: horizontal;
+}
+
+element {
+	padding: 3 5;
+}
+
+inputbar {
+	color: white;
+	border-radius: 5px;
+	padding: 4 0;
+}
+
+entry {
+	width: 200px;
+	padding: 0 4;
+}
+
+/* vim:ft=css

@@ -14,12 +14,12 @@ title_align center
 
 # start a load of stuff
 exec .screenlayout/layout.sh 				# sets monitor layout with xrandr
-exec --no-startup-id ~/.config/polybar/start.sh		# start polybar
+exec --no-startup-id polybar bar			# start polybar
 exec xrdb .Xresources					# xrdb for urxvt
 exec lxsession						# lxsession for polkit, autostart
 exec picom						# make it pretty
 exec --no-startup-id nm-applet				# networking config in the tray
-exec feh --bg-fill wallpaper.jpg			# set wallpaper
+exec hsetroot -solid "#61b2f0"		 		# set wallpaper
 
 # bind print to flameshot for screenshots
 bindsym Print exec flameshot gui
@@ -29,7 +29,7 @@ bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 1
 bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 1
 bindsym XF86AudioMute exec pulseaudio-ctl mute
 
-# control playerctl players with media buttons
+# control playerctl players with media buttonsfeh --bg-fill wallpaper.jpg	
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -40,7 +40,8 @@ floating_modifier $mod
 # keybinds for terminal, kill, and rofi
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -show run
+bindsym $mod+Shift+d exec rofi -show run
+bindsym $mod+d exec rofi -modi drun -show drun
 
 # default keybinds for movement, focus, split and layout
 bindsym $mod+j focus left
@@ -134,8 +135,16 @@ bindsym $mod+Control+Up resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+Right resize grow width 10 px or 10 ppt
 
 # add gaps for visual separation
-for_window [class="^.*"] border pixel 0 
-gaps inner 12
+for_window [class="^.*"] border pixel 3 
+gaps inner 24
+
+
+# class                 border  bground text    indicator child_border
+client.focused          #008776 #008776 #FFFFFF #008776   #008776
+client.focused_inactive #222222 #222222 #FFFFFF #222222   #222222
+client.unfocused        #444444 #444444 #AAAAAA #444444   #444444
+client.urgent           #F0918F #F0918F #222222 #F0918F   #F0918F
+client.placeholder      #222222 #222222 #FFFFFF #222222   #222222
 
 
 # fix for jetbrains ide splash screens

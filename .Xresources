@@ -16,3 +16,44 @@ URxvt.keysym.Shift-Control-V:	eval:paste_clipboard
 URxvt.keysym.Shift-Meta-c:	builtin-string:
 URxvt.keysym.Shift-Meta-v:	builtin-string:
 
+URxvt.font:		xft:Azeret Mono:size=10
+URxvt.internalBorder:  	16
+
+! colours
+! special
+*.foreground:   #ffffff
+*.background:   #141414
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #222222
+*.color8:       #444444
+
+! red
+*.color1:       #b25d5d
+*.color9:       #f0918f
+
+! green
+*.color2:       #49844a
+*.color10:      #82b97c
+
+! yellow
+*.color3:       #9d6c3a
+*.color11:      #db9f6c
+
+! blue
+*.color4:       #397db8
+*.color12:      #61b2f0
+
+! magenta
+*.color5:       #a65f94
+*.color13:      #dd94ca
+
+! cyan
+*.color6:       #008776
+*.color14:      #40beaa
+
+! white
+*.color7:       #888888
+*.color15:      #ffffff
+

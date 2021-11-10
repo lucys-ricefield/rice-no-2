@@ -1,0 +1,38 @@
+; ---
+; Lucy's Rice Field
+; https://github.com/lucys-ricefield
+; Rice #2
+; Polybar config
+
+
+[col]
+bg = #141414
+fg = #ffffff
+accent = #61b2f0
+
+
+[bar/bar]
+font-0 = Azeret Mono:size=10;3
+background = ${col.bg}
+height = 40
+bottom = true
+
+modules-left = i3
+modules-right = date
+
+module-margin = 1
+padding = 2
+tray-position = right
+
+[module/i3]
+type = internal/i3
+label-focused-foreground = ${col.accent}
+index-sort = true
+label-separator = " " 
+
+[module/date]
+type = internal/date
+interval = 60
+date = %H:%M %a %d %b
+
+; vim: ft=dosini

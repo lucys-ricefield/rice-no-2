@@ -1,0 +1,5 @@
+configuration {
+	theme: "lucys-ricefield-2";
+	monitor: "primary";
+}
+/* vim:ft=css

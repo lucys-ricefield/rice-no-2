@@ -1,0 +1,99 @@
+# ---
+# Lucy's Rice Field
+# https://github.com/lucys-ricefield
+# Rice #2
+# dunstrc
+# ---
+
+[global]
+# display on the primary monitor 
+monitor = 0
+follow = none
+
+### Geometry ###
+
+width = 1300
+height = 40
+origin = bottom-center 
+offset = 0x0
+scale = 0
+notification_limit = 1
+
+# the bar wraps and doesn't fit so just turn it off
+progress_bar = false
+
+indicate_hidden = yes
+transparency = 0
+separator_height = 0
+padding = 8
+horizontal_padding = 8
+text_icon_padding = 0
+
+frame_width = 0
+
+frame_color = "#aaaaaa"
+separator_color = frame
+
+# sort messages by urgency
+sort = yes
+
+font = Azeret Mono 12
+line_height = 0
+
+markup = full
+format = "<b>%s</b> %b %p"
+alignment = center
+
+vertical_alignment = center
+
+show_age_threshold = 60
+
+ellipsize = middle
+
+ignore_newline = yes
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = no
+
+icon_position = left
+
+min_icon_size = 0
+max_icon_size = 32
+
+# Paths to default icons.
+icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/
+
+sticky_history = yes
+history_length = 20
+
+browser = /usr/bin/xdg-open
+always_run_script = true
+
+title = Dunst
+class = Dunst
+
+corner_radius = 0
+
+ignore_dbusclose = false
+
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+[urgency_low]
+background = "#141414"
+foreground = "#888888"
+timeout = 10
+
+[urgency_normal]
+background = "#141414"
+foreground = "#ffffff"
+timeout = 10
+
+[urgency_critical]
+background = "#141414"
+foreground = "#f0918f"
+frame_color = "#ff0000"
+timeout = 0
+
+# vim: ft=cfg
