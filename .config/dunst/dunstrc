@@ -37,7 +37,7 @@ separator_color = frame
 # sort messages by urgency
 sort = yes
 
-font = Azeret Mono 12
+font = Azeret Mono 10
 line_height = 0
 
 markup = full
