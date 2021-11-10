@@ -1,0 +1,19 @@
+---
+Lucy's Rice Field
+https://github.com/lucys-ricefield
+Arch package list for rice #2
+---
+
+i3-gaps 
+picom 
+rofi
+dunst
+lxsession
+nm-applet
+hsetroot
+flameshot
+playerctl
+rxvt-unicode
+
+polybar-git(AUR)
+pulseaudio-ctl(AUR)
