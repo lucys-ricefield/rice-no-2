@@ -1,8 +1,8 @@
 # ---
 # Lucy's Rice Field
+# https://github.com/lucys-ricefield
 # Base i3 config
 # ---
-
 
 # I use mod4 (windows)
 set $mod Mod4
