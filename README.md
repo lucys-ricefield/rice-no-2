@@ -2,6 +2,8 @@
 #### <https://github.com/lucys-ricefield/rice-no-2>
 Designed by [Lucy Poulton](https://github.com/lucypoulton)
 
+![Screenshot](/screenshot.png)
+
 This rice is still a work-in-progress, expect tweaks.
 
 - **WM**: i3-gaps
