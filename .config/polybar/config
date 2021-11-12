@@ -18,9 +18,9 @@ height = 40
 bottom = true
 
 modules-left = i3
-modules-right = date
+modules-right = battery date
 
-module-margin = 1
+module-margin = 2
 padding = 2
 tray-position = right
 
@@ -34,5 +34,10 @@ label-separator = " "
 type = internal/date
 interval = 60
 date = %H:%M %a %d %b
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
 
 ; vim: ft=dosini
