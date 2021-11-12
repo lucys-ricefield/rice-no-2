@@ -1,7 +1,7 @@
 /* ---
  * Lucy's Rice Field
  * https://github.com/lucys-ricefield
- * Rice #2
+ * Rice #2 (pink version!)
  * lucys-ricefield-2 rofi theme */
 
 * {
@@ -11,7 +11,7 @@
 }
 
 selected {
-	color:	#40beaa;
+	color:	#dd94ca;
 }
 
 window {
