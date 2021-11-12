@@ -14,7 +14,7 @@ follow = none
 
 width = 1300
 height = 40
-origin = bottom-center 
+origin = bottom-left 
 offset = 0x0
 scale = 0
 notification_limit = 1
@@ -41,8 +41,8 @@ font = Azeret Mono 10
 line_height = 0
 
 markup = full
-format = "<b>%s</b> %b %p"
-alignment = center
+format = "<i>%a:</i> <b>%s</b> %b %p"
+alignment = left
 
 vertical_alignment = center
 
@@ -55,13 +55,7 @@ stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = no
 
-icon_position = left
-
-min_icon_size = 0
-max_icon_size = 32
-
-# Paths to default icons.
-icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/
+icon_position = off
 
 sticky_history = yes
 history_length = 20
