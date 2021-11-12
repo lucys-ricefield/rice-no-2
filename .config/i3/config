@@ -140,7 +140,7 @@ gaps inner 24
 
 
 # class                 border  bground text    indicator child_border
-client.focused          #008776 #008776 #FFFFFF #008776   #008776
+client.focused          #a65f94 #a65f94 #FFFFFF #a65f94   #a65f94
 client.focused_inactive #222222 #222222 #FFFFFF #222222   #222222
 client.unfocused        #444444 #444444 #AAAAAA #444444   #444444
 client.urgent           #F0918F #F0918F #222222 #F0918F   #F0918F
