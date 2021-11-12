@@ -5,7 +5,7 @@
  * lucys-ricefield-2 rofi theme */
 
 * {
-	background-color:	transparent;
+	background-color:	#141414;
 	color:			white;
 	font:			"Azeret Mono 10";
 }
@@ -15,9 +15,10 @@ selected {
 }
 
 window {
-	location: 	south;
+	location: 	southwest;
 	height:		40px;
 	width: 		1300px;
+	padding: 0 16;
 }
 
 mainbox {
@@ -44,4 +45,7 @@ entry {
 	padding: 0 4;
 }
 
+prompt {
+	highlight: bold italic;
+}
 /* vim:ft=css
