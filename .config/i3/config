@@ -19,7 +19,7 @@ exec xrdb .Xresources					# xrdb for urxvt
 exec lxsession						# lxsession for polkit, autostart
 exec picom						# make it pretty
 exec --no-startup-id nm-applet				# networking config in the tray
-exec hsetroot -solid "#afa2e8"		 		# set wallpaper
+exec hsetroot -solid "#7f6db1"		 		# set wallpaper
 
 # bind print to flameshot for screenshots
 bindsym Print exec flameshot gui
